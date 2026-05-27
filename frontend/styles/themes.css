@@ -1,0 +1,82 @@
+:root {
+  /* COLORS */
+
+  --bg-primary: #050816;
+  --bg-secondary: #0f172a;
+
+  --surface-1: rgba(255, 255, 255, 0.03);
+  --surface-2: rgba(255, 255, 255, 0.05);
+  --surface-3: rgba(255, 255, 255, 0.08);
+
+  --surface-glass: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --text-primary: #f8fafc;
+
+  --text-secondary: #94a3b8;
+
+  --primary: #8b5cf6;
+  --secondary: #06b6d4;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  /* TYPOGRAPHY */
+
+  --fs-display: clamp(3rem, 7vw, 5rem);
+
+  --fs-heading: clamp(1.3rem, 3vw, 2rem);
+
+  --fs-body: clamp(0.95rem, 1vw, 1rem);
+
+  --line-tight: 1.1;
+  --line-normal: 1.65;
+  --line-loose: 1.9;
+
+  /* SPACING */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+
+  /* RADII */
+
+  --radius-sm: 14px;
+  --radius-md: 22px;
+  --radius-lg: 34px;
+
+  /* SHADOWS */
+
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.18);
+
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  --shadow-lg: 0 25px 80px rgba(0, 0, 0, 0.45);
+
+  /* MOTION */
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --transition-fast: 0.18s var(--ease-out);
+
+  --transition-normal: 0.32s var(--ease-smooth);
+
+  --transition-slow: 0.6s var(--ease-smooth);
+
+  --max-reading-width: 70ch;
+}

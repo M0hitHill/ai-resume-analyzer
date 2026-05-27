@@ -1,0 +1,170 @@
+/* CARD */
+
+.card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: clamp(28px, 5vw, 60px);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--surface-glass);
+
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: var(--shadow-lg);
+}
+
+/* TITLE */
+
+h1 {
+  font-size: var(--fs-display);
+
+  line-height: var(--line-tight);
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+
+  margin-bottom: var(--space-4);
+
+  background: linear-gradient(to right, #ffffff, #d8b4fe, #67e8f9);
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+.subtitle {
+  max-width: var(--max-reading-width);
+
+  margin-bottom: var(--space-8);
+
+  line-height: var(--line-loose);
+
+  color: var(--text-secondary);
+}
+
+/* FORM */
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-7);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-3);
+}
+
+/* LABEL */
+
+label {
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  color: #dbe4f0;
+}
+
+/* INPUTS */
+
+input[type="file"],
+textarea {
+  width: 100%;
+
+  border: 1px solid transparent;
+
+  outline: none;
+
+  color: var(--text-primary);
+
+  background: var(--surface-2);
+
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-normal),
+    background var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+input[type="file"] {
+  padding: 22px;
+
+  border-radius: var(--radius-md);
+
+  border: 1px dashed var(--border-strong);
+
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 220px;
+
+  padding: 22px;
+
+  border-radius: var(--radius-md);
+
+  resize: vertical;
+
+  line-height: var(--line-loose);
+}
+
+/* BUTTON */
+
+button {
+  position: relative;
+
+  overflow: hidden;
+
+  border: none;
+
+  border-radius: var(--radius-md);
+
+  padding: 20px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  font-size: larger;
+
+  color: white;
+
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* RESULT CARD */
+
+.result-card {
+  padding: 28px;
+
+  border-radius: var(--radius-md);
+
+  border: 1px solid var(--border);
+
+  background: var(--surface-1);
+
+  backdrop-filter: blur(12px);
+}
+
+/* TAG */
+
+.tag {
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(139, 92, 246, 0.14);
+
+  border: 1px solid rgba(139, 92, 246, 0.22);
+
+  color: #d8b4fe;
+}

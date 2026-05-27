@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/themes.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="stylesheet" href="styles/utilities.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>AI Resume Analyzer</h1>
+
+        <form
+          action="/analyze"
+          method="POST"
+          enctype="multipart/form-data"
+          id="resume-form"
+        >
+          <div class="form-group">
+            <label for="pdf-upload">Upload Resume PDF</label>
+
+            <input
+              type="file"
+              id="pdf-upload"
+              name="resume"
+              accept="application/pdf"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="job_description">Job Description</label>
+
+            <textarea
+              rows="6"
+              maxlength="1000"
+              name="job_description"
+              placeholder="Paste Job Description"
+              id="job_description"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Analyze Resume</button>
+        </form>
+      </section>
+
+      <section id="result" class="result-section">
+        <div id="loading" class="hidden">Analyzing Resume...</div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
