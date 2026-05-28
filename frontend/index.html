@@ -2,8 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Resume Analyzer</title>
+
+    <meta name="theme-color" content="#050816" />
+
+    <title>ResumeIQ — AI Resume Analyzer</title>
+
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/themes.css" />
     <link rel="stylesheet" href="styles/layout.css" />
@@ -15,16 +20,16 @@
   <body>
     <main class="container">
       <section class="card">
-        <h1>AI Resume Analyzer</h1>
+        <h1>ResumeIQ</h1>
 
-        <form
-          action="/analyze"
-          method="POST"
-          enctype="multipart/form-data"
-          id="resume-form"
-        >
+        <p class="subtitle">
+          ATS scoring, keyword analysis, and AI-powered resume feedback for
+          modern hiring.
+        </p>
+
+        <form enctype="multipart/form-data" id="resume-form" autocomplete="off">
           <div class="form-group">
-            <label for="pdf-upload">Upload Resume PDF</label>
+            <label for="pdf-upload"> Upload Resume PDF </label>
 
             <input
               type="file"
@@ -36,7 +41,7 @@
           </div>
 
           <div class="form-group">
-            <label for="job_description">Job Description</label>
+            <label for="job_description"> Job Description </label>
 
             <textarea
               rows="6"
@@ -48,15 +53,28 @@
             ></textarea>
           </div>
 
-          <button type="submit">Analyze Resume</button>
+          <button type="submit" class="primary-btn">Analyze Resume</button>
         </form>
       </section>
 
-      <section id="result" class="result-section">
-        <div id="loading" class="hidden">Analyzing Resume...</div>
+      <section id="result" class="result-section" aria-live="polite">
+        <div class="empty-state">
+          <h3>No Analysis Yet</h3>
+
+          <p>
+            Upload your resume and paste a job description to generate ATS
+            analysis and AI feedback.
+          </p>
+        </div>
+
+        <div id="loading" class="loading hidden">
+          <div class="spinner"></div>
+
+          <p>Analyzing Resume...</p>
+        </div>
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>

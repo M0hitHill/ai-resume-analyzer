@@ -1,8 +1,8 @@
 from fastapi import APIRouter, UploadFile, File, Form
 
-from services.resume_service import (
-    analyze_resume_service
-)
+from services.resume_service import analyze_resume_service
+import json
+
 
 router = APIRouter()
 
@@ -24,6 +24,7 @@ async def analyze_resume(
             resume,
             job_description
         )
+        analysis = json.loads(analysis)
         print(analysis)
         return analysis
 

@@ -1,4 +1,4 @@
-export function showLoading() {
+export function createLoading() {
   return `
     <div class="loading">
 

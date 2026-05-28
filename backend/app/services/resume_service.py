@@ -39,5 +39,6 @@ async def analyze_resume_service(
     analysis = analyze_resume_with_ai(
         final_prompt
     )
+    # print(analysis)
 
     return analysis
